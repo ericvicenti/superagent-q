@@ -15,9 +15,9 @@ SuperAgent's documentation has an example like this:
 	     }
 	   });
 
-Use Agent-Q like this:
+Use SuperAgent-Q like this:
 
-var request = require('agent-q');
+var request = require('superagent-q');
 
 	 request
 	   .post('/api/pet')
