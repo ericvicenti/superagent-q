@@ -1,0 +1,35 @@
+{
+  "name": "superagent-q",
+  "version": "0.0.1",
+  "description": "Very thin wrapper layer between super-agent and Q to promisify superagent's callbacks",
+  "author": {
+    "name": "Eric Vicenti",
+    "email": "ericvicenti@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Dan Echlin",
+      "email": "dan@echl.in"
+    }
+  ],
+  "private": false,
+  "main": "./index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/ericvicenti/superagent-q.git"
+  },
+  "dependencies": {
+    "q": "~0.9.6",
+    "superagent": ""
+  },
+  "devDependencies": {
+  },
+  "readme": "# Usage\n\nSuperAgent's documentation has an example like this:\n\n\t request\n\t   .post('/api/pet')\n\t   .send({ name: 'Manny', species: 'cat' })\n\t   .set('X-API-Key', 'foobar')\n\t   .set('Accept', 'application/json')\n\t   .end(function(res){\n\t     if (res.ok) {\n\t       alert('yay got ' + JSON.stringify(res.body));\n\t     } else {\n\t       alert('Oh no! error ' + res.text);\n\t     }\n\t   });\n\nUse Agent-Q like this:\n\nvar qrequest = require('agent-q');\n\n\t qrequest.end(request\n\t   .post('/api/pet')\n\t   .send({ name: 'Manny', species: 'cat' })\n\t   .set('X-API-Key', 'foobar')\n\t   .set('Accept', 'application/json'))\n\t   .then(function(res){\n\t     if (res.ok) {\n\t       alert('yay got ' + JSON.stringify(res.body));\n\t     } else {\n\t       alert('Oh no! error ' + res.text);\n\t     }\n\t   }).done();\n\nYep, it's that simple. But if you work with promises a lot, you know this gives you much-needed flexibility, e.g., to chain without dealing with pyramid code, and to return promises so the calling function can chain the callback.",
+  "readmeFilename": "README.md",
+  "_id": "agent-q@0.0.1",
+  "dist": {
+    "shasum": "7b79f06a8e40412f1412dd05163f002f45013553"
+  },
+  "_from": "agent-q@",
+  "_resolved": "https://registry.npmjs.org/agent-q/-/agent-q-0.0.1.tgz"
+}
