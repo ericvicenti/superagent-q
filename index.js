@@ -10,7 +10,8 @@ function wrap(item) {
 
     agent.end = function() {
       var doEnd = Q.defer();
-      agentEnd.call(agent, function(res) {
+      agentEnd.call(agent, function(err, res) {
+        if (err) return doEnd.reject(err);
         doEnd.resolve(res);
       });
       return doEnd.promise;
