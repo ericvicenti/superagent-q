@@ -10,10 +10,16 @@ function wrap(item) {
 
     agent.end = function() {
       var doEnd = Q.defer();
+      
+      agent.on('progress', function (e) {
+        doEnd.notify(e);
+      });
+      
       agentEnd.call(agent, function(err, res) {
         if (err) return doEnd.reject(err);
         doEnd.resolve(res);
       });
+      
       return doEnd.promise;
     }
 
