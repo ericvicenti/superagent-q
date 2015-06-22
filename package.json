@@ -19,8 +19,8 @@
     "url" : "http://github.com/ericvicenti/superagent-q.git"
   },
   "dependencies": {
-    "q": "~0.9.6",
-    "superagent": ""
+    "q": "^1.4.1",
+    "superagent": "^1.2.0"
   },
   "devDependencies": {
   },
