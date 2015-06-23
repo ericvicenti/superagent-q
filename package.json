@@ -1,6 +1,6 @@
 {
   "name": "superagent-q",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Very thin wrapper layer between super-agent and Q to promisify superagent's callbacks",
   "author": {
     "name": "Eric Vicenti",
